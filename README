@@ -1,0 +1,48 @@
+*******************************************************************************
+* Wireless Security System
+* Kevin Haines
+********************************************************************************
+
+OVERVIEW:
+
+This project uses a battery-powered Arduino mkr1000 to connect to a WLAN in order
+to send an email upon a door opening warning of an intruder.
+
+KEY SUPPLIES:
+
+Arduino mkr1000
+Magnetic door switch
+Siren
+Simple slider switch
+
+SETUP INSTRUCTIONS:
+
+The user is required to create their own Temboo account and follow the instructions 
+found here https://temboo.com/arduino/others/send-an-email Generating a sketch isn't
+required, simply copy the generated Temboo app key, the app key name and temboo 
+account into the provided SS_MAIN file just below #include <Temboo.h>.
+
+The user must also rename the WIFI_SSID and WPA_PASSWORD definitions in SS_MAIN with
+the name and password of the wifi network the user wishes to use.
+
+The user must wire up the device as shown in the provided Fritzing file.  Once wired,
+the device must be placed onto the door wished to be monitored and powered on.  
+
+OPERATION DETAILS:
+
+The device chirps for approximately 10 seconds once powered on.  During this time, 
+opening the door does not send an email. Once the chirping has ended the security
+system is enabled.  Once enabled, the system reacts to the opening of a door in the
+following sequence:
+
+	--3 seconds of no silence
+	--System connects to wifi network
+	--Email is sent
+	--Siren is activated and remains activated for 5 minutes
+	--Siren deactivates but system remains enabled and is ready to react to
+	  door opening
+
+The slider switch allows the user to select how the siren operates when activated--
+either repeating on for 325ms and off for 325ms or constantly on.
+
+Refer to the flow chart for additional information.
