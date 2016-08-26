@@ -17,6 +17,10 @@ Simple slider switch
 
 SETUP INSTRUCTIONS:
 
+The user is required to download the lowpower library from the github Repository at
+https://github.com/rocketscream/Low-Power/tree/9692ae155b0395c1a0676c063995cf06fe761203
+and add it to the arduino library.
+
 The user is required to create their own Temboo account and follow the instructions 
 found here https://temboo.com/arduino/others/send-an-email Generating a sketch isn't
 required, simply copy the generated Temboo app key, the app key name and temboo 
